@@ -1,5 +1,5 @@
 export interface Deelnemer {
-  id?: number;
+  id: number;
   naam: string;
   geboortedatum: Date;
   rating: number;

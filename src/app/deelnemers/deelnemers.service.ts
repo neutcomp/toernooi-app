@@ -24,7 +24,7 @@ export class DeelnemersService {
     return this.deelnemers;
   }
 
-  getDeelnemer(id: Number) {
+  getDeelnemer(id: number) {
     return this.deelnemers.filter((deelnemer) => id === deelnemer.id);
   }
 
@@ -36,7 +36,8 @@ export class DeelnemersService {
   }
 
   deelnemerToevoegen(deelnemer: Deelnemer) {
-    console.log("Data:" + deelnemer);
+    deelnemer.id = this.deelnemers.length + 1;
+    console.log("Data:", deelnemer);
 
     this.deelnemers.push(deelnemer);
   }

@@ -21,6 +21,7 @@ export class DeelnemerToevoegenComponent {
     console.log("Deelnemer toevoegen");
 
     this.deelnemersService.deelnemerToevoegen({
+      id: 0,
       naam: this.naam,
       geboortedatum: new Date(this.geboortedatum),
       rating: parseInt(this.rating),

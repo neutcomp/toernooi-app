@@ -28,4 +28,9 @@ export class DeelnemersComponent {
   sluitDeelnemerToevoegen() {
     this.toonDeelnemerToevoegen = false;
   }
+
+  wijzigDeelnemer(deelnemerId: number) {
+    const deelnemer = this.deelnemerService.getDeelnemer(deelnemerId);
+    console.log("Deelnemer wijzigen", deelnemer);
+  }
 }
