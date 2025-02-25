@@ -1,0 +1,19 @@
+<p>deelnemer-toevoegen</p>
+
+<form (ngSubmit)="deelnemerToevoegen()">
+  <label for="naam">Naam: </label>
+  <input type="text" name="naam" id="naam" [(ngModel)]="naam" />
+
+  <label for="geboortedatum">Geboortedatum: </label>
+  <input
+    type="date"
+    name="geboortedatum"
+    id="geboortedatum"
+    [(ngModel)]="geboortedatum"
+  />
+
+  <label for="rating">Rating: </label>
+  <input type="text" name="rating" id="rating" [(ngModel)]="rating" />
+
+  <button type="submit">voeg toe</button>
+</form>

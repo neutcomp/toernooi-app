@@ -1,0 +1,23 @@
+@if(toonDeelnemerToevoegen){
+<app-deelnemer-toevoegen />
+}
+
+<p>Alle deelnemers</p>
+<button (click)="deelnemerToevoegen()" (close)="sluitDeelnemerToevoegen()">toevoegen</button>
+
+<table>
+  @for (deelnemer of getDeelnemers(); track deelnemer.id) {
+  <tr>
+    <td>
+      {{ deelnemer.naam }}
+      <div>
+        ({{ calculateAge(deelnemer.geboortedatum) }} jaar)
+        <span class="only-show-on-hover">
+          {{ deelnemer.geboortedatum | date : "dd-MM-yyyy" }}
+        </span>
+      </div>
+    </td>
+    <td>{{ deelnemer.rating }}</td>
+  </tr>
+  }
+</table>
