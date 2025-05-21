@@ -21,6 +21,8 @@ export class DeelnemersService {
   ];
 
   getDeelnemers() {
+    this.deelnemers.sort((a, b) => b.rating - a.rating);
+
     return this.deelnemers;
   }
 
